@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth;
+}
+// Tostify styles
+.Toastify {
+  >div {
+    min-width: 375px;
+    width: fit-content !important;
+
+    >div {
+      min-width: 375px;
+      padding: 0px 16px;
+      width: fit-content;
+      background-color: #121214;
+    }
+  }
+}
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// body style
+p,.body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 2%;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+// descriptions style
+
+.description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  text-transform: capitalize;
+
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+
+// subtitle style
+.subtitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2%;
+  text-transform: capitalize;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #285172 inset; /* Replace with your bg color */
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.react-datepicker-wrapper{
+  width: 100% !important;
+}
