@@ -57,7 +57,7 @@ const HeroSection = () => {
         />
       </div>
       <div className="w-full relative">
-        <div className="w-full flex items-center pb-20 gap-[52px] max-w-[1496px] mx-auto px-4">
+        <div className="w-full flex items-center mb-20 gap-[52px] max-w-[1496px] mx-auto px-4">
           <div className="w-full max-w-[335px] mx-auto lg:max-w-full lg:mx-0 lg:w-1/2 flex flex-col gap-2 text-center items-center lg:items-start justify-center lg:justify-start lg:text-left">
             <p className="font-Montserrat  font-semibold text-base lg:text-[18px] m-0 leading-[150%] tracking-[24%] uppercase text-[#7C899C]">
               EXPLORE THE
@@ -84,20 +84,20 @@ const HeroSection = () => {
               className="w-full h-auto aspect-square object-cover"
             />
           </div>
-          <div className="w-full lg:w-1/2 hidden">
+        </div>
+
+        <div className="w-full pb-20 px-4 relative md:mt-[350px] md:pt-[230px] lg:mt-0 lg:pt-20 bg-card-background  lg:bg-none">
+          <div className="w-full max-w-[580px] mx-auto md:absolute z-20 md:left-2/4 md:-translate-x-2/4 top-4 md:-top-[350px] block lg:hidden">
             <Image
               src="/assets/Saly-2.png"
               alt="hero-iamge"
-              width={897}
-              height={795}
-              className="w-full h-auto aspect-square object-cover"
+              width={580}
+              height={518.58}
+              className="w-full h-full aspect-square object-cover"
             />
           </div>
-        </div>
-
-        <div className="w-full py-20 px-4 relative bg-card-background  lg:bg-none">
           <div className="w-full hidden lg:block absolute top-[20%] inset-0 z-10 bg-card-background max-h-[528px]" />
-          <div className="w-full  lg:relative h-full grid  z-40 grid-cols-1 md:grid-cols-3 gap-6 max-w-[1496px] mx-auto">
+          <div className="w-full  lg:relative h-full grid  z-50 grid-cols-1 md:grid-cols-3 gap-4 md:gap-3 lg:gap-6 max-w-[1496px] mx-auto">
             {stepsData?.map(
               ({ image, icon, step, title, description }, index) => {
                 return (
