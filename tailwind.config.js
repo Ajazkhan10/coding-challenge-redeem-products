@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -36,7 +37,16 @@ module.exports = {
         "h4-desktop": ["2.813rem", "1.75rem"], // 32px / 40px
       },
       backgroundImage: {
-        "manu-border-gradient": "linear-gradient(90deg, rgba(255,255,255,0.021) 0%, rgba(255,255,255,0.35) 52%, rgba(255,255,255,0.14) 100%)",
+        "custom-gradient":
+          "linear-gradient(102.47deg, #176FEB -5.34%, #FF80FF 106.58%)",
+        "textGradient":
+          "linear-gradient(102.47deg, #176FEB -5.34%, #FF80FF 106.58%)",
+          "card-background": "linear-gradient(102.47deg, rgba(23, 111, 235, 0.5) -5.34%, rgba(255, 128, 255, 0.5) 106.58%)",
+
+      },
+      boxShadow: {
+        "custom-sm": "0px 2px 8px 0px #0000000D",
+        'custom-lg': '0px 2px 40px 0px #0000000D',
       },
       borderImage: {
         gradient: [

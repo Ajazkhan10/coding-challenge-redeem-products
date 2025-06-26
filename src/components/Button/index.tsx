@@ -1,9 +1,10 @@
 import React from "react";
 import classNames from "classnames";
 import Link from "next/link";
+import Icon from "../Icon/Icon";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "tabButton";
+  variant?: "primary" | "secondary";
   label?: string;
   slug?: string;
 }
@@ -17,31 +18,33 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const variantStyles = {
     primary:
-      "bg-primary_orange px-6 py-3 rounded-full text-white hover:opacity-90 font-bebas font-medium text-2xl leading-7 tracking-[2%] text-center transition duration-300 ease-in-out",
+      "w-fit group flex items-center whitespace-nowrap cursor-pointer justify-center gap-2 text-white text-base lg:text-[18px] hover:bg-black font-Montserrat hover:opacity-70 border-none outline-none font-semibold px-10 py-5 lg:py-[26px] rounded-full bg-custom-gradient shadow-custom-sm transition-transform duration-300",
     secondary:
       "py-[2px] px-[35px] rounded-full md:py-[14px] md:px-[58px] font-bebas hover:bg-secondary_dark_blue text-white rounded-[64px] text-sm md:text-2xl tracking-[2%] leading-7 font-medium hover:opacity-90 opacity-100 bg-secondary_deep_blue transition duration-300 ease-in-out",
-    tabButton:
-      "rounded-lg px-3 md:px-6 py-3 font-Roboto capitalize text-base md:text-lg bg-secondary_light_blue  hover:bg-primary_orange text-white font-medium leading-7 tracking-[2%] text-center",
   };
 
-  const combinedClasses = classNames(
-    variantStyles[variant],
-    className
+  const combinedClasses = classNames(variantStyles[variant], className);
+
+  const content = (
+    <>
+      {label}
+      {variant === "primary" && (
+        <Icon icon="button-icon" width={18} height={18} className="transition-transform duration-300 group-hover:rotate-0"/>
+      )}
+    </>
   );
-
-
 
   if (slug) {
     return (
       <Link href={slug} className={combinedClasses}>
-            {label && label}
+        {content}
       </Link>
     );
   }
 
   return (
     <button className={combinedClasses} {...props}>
-          {label && label}
+      {content}
     </button>
   );
 };

@@ -1,5 +1,5 @@
 {
-  "name": "coding-challenge-redeem-products",
+  "name": "new",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
-    "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "next": "15.3.4",
+    "react-icons": "^5.5.0",
+    "classnames": "^2.5.1",
     "sass": "^1.85.1"
   },
   "devDependencies": {
