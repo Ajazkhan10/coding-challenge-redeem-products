@@ -47,6 +47,8 @@ module.exports = {
       boxShadow: {
         "custom-sm": "0px 2px 8px 0px #0000000D",
         'custom-lg': '0px 2px 40px 0px #0000000D',
+       "custom-xl": "0px 2px 12px 0px #00000014",
+
       },
       borderImage: {
         gradient: [

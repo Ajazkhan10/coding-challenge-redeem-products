@@ -18,7 +18,7 @@ const StepCard: React.FC<StepCardProps> = ({ icon, step, title, description, ima
         <Heading type="h3" className="flex items-center gap-4">
           {icon} <span className="bg-textGradient bg-clip-text text-transparent">{step}—{title}</span>
         </Heading>
-        <p className="w-full lg:max-w-[400px] font-Montserrat font-semibold md:font-normal text-base lg:text-[18px] leading-[150%] tracking-[24%] uppercase text-[#7C899C]">{description}</p>
+        <p className="w-full lg:max-w-[400px] body">{description}</p>
       </div>
     </div>
   );

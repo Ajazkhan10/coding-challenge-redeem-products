@@ -46,7 +46,7 @@ const HeroSection = () => {
   
 
   return (
-    <section className="w-full bg-white relative  mt-20">
+    <section className="w-full bg-white relative">
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <Image
           src="/assets/wave-pethern-image.png"
@@ -59,7 +59,7 @@ const HeroSection = () => {
       <div className="w-full relative">
         <div className="w-full flex items-center mb-20 gap-[52px] max-w-[1496px] mx-auto px-4">
           <div className="w-full max-w-[335px] mx-auto lg:max-w-full lg:mx-0 lg:w-1/2 flex flex-col gap-2 text-center items-center lg:items-start justify-center lg:justify-start lg:text-left">
-            <p className="font-Montserrat  font-semibold text-base lg:text-[18px] m-0 leading-[150%] tracking-[24%] uppercase text-[#7C899C]">
+            <p className="body">
               EXPLORE THE
             </p>
             <Heading type="h1" className="!font-black !m-0 !p-0 flex flex-col">
@@ -68,7 +68,7 @@ const HeroSection = () => {
               </span>
               zone
             </Heading>
-            <p className="font-Montserrat font-semibold md:font-normal mt-2  text-center lg:text-left mb-10 lg:mb-14 text-base lg:text-[18px] leading-[150%] tracking-[24%] uppercase text-[#7C899C]">
+            <p className="body mt-2  text-center lg:text-left mb-10 lg:mb-14">
               Here you’ll be able to exchange all of your hard-earned Aeropoints
               and exchange them for cool tech.
             </p>

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:icon-list": "node ./scripts/generateIconsList.js",
+    "spritegen": "npx svg-sprite -s --symbol-dest public --symbol-sprite sprite.svg icons/*.svg && npm run generate:icon-list"
   },
   "dependencies": {
     "react": "^19.0.0",

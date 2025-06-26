@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 // Tostify styles
 .Toastify {
   >div {
@@ -15,24 +16,30 @@ html {
     }
   }
 }
-body{
+
+body {
   margin: 0 !important;
   padding: 0 !important;
 }
 
 // body style
-p,.body {
-  font-family: "Roboto", sans-serif;
+p,
+.body {
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 2%;
+  line-height: 150%;
+  letter-spacing: 24%;
+  color: #7C899C;
+  margin: 0 !important;
+  text-transform: uppercase;
 
   @media (max-width: 768px) {
     font-size: 16px;
-    line-height: 22px;
+    font-weight: 600;
   }
 }
+
 
 // descriptions style
 
@@ -67,16 +74,17 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px #285172 inset; /* Replace with your bg color */
+  -webkit-box-shadow: 0 0 0px 1000px #285172 inset;
+  /* Replace with your bg color */
   -webkit-text-fill-color: white;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.react-datepicker-wrapper{
+.react-datepicker-wrapper {
   width: 100% !important;
 }
 
 
-.textGradient{
+.textGradient {
   color: linear-gradient(102.47deg, #176FEB -5.34%, #FF80FF 106.58%);
 }
