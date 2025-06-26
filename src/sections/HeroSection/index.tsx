@@ -68,7 +68,7 @@ const HeroSection = () => {
               </span>
               zone
             </Heading>
-            <p className="font-Montserrat font-normal mt-2  text-center lg:text-left mb-10 lg:mb-14 text-base lg:text-[18px] leading-[150%] tracking-[24%] uppercase text-[#7C899C]">
+            <p className="font-Montserrat font-semibold md:font-normal mt-2  text-center lg:text-left mb-10 lg:mb-14 text-base lg:text-[18px] leading-[150%] tracking-[24%] uppercase text-[#7C899C]">
               Here you’ll be able to exchange all of your hard-earned Aeropoints
               and exchange them for cool tech.
             </p>
@@ -86,18 +86,18 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full pb-20 px-4 relative md:mt-[350px] md:pt-[230px] lg:mt-0 lg:pt-20 bg-card-background  lg:bg-none">
-          <div className="w-full max-w-[580px] mx-auto md:absolute z-20 md:left-2/4 md:-translate-x-2/4 top-4 md:-top-[350px] block lg:hidden">
+        <div className="w-full pb-20 md:px-4 mt-10 relative md:mt-[350px] md:pt-[230px] lg:mt-0 lg:pt-20 bg-card-background lg:bg-none">
+          <div className="w-full max-w-[580px] relative overflow-hidden  mx-auto md:absolute z-20 md:left-2/4 md:-translate-x-2/4 -top-24 md:-top-[350px] block lg:hidden">
             <Image
               src="/assets/Saly-2.png"
               alt="hero-iamge"
               width={580}
               height={518.58}
-              className="w-full h-full aspect-square object-cover"
+              className="w-full min-h-[520px] h-full aspect-square object-cover"
             />
           </div>
           <div className="w-full hidden lg:block absolute top-[20%] inset-0 z-10 bg-card-background max-h-[528px]" />
-          <div className="w-full  lg:relative h-full grid  z-50 grid-cols-1 md:grid-cols-3 gap-4 md:gap-3 lg:gap-6 max-w-[1496px] mx-auto">
+          <div className="w-full px-4 md:px-0 relative -top-24 md:top-0 h-full grid  z-50 grid-cols-1 md:grid-cols-3 gap-4 md:gap-3 lg:gap-6 max-w-[1496px] mx-auto">
             {stepsData?.map(
               ({ image, icon, step, title, description }, index) => {
                 return (
