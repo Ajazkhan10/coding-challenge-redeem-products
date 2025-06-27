@@ -3,11 +3,14 @@ import Icon from "../Icon/Icon";
 import AeroCard from "./AeroCard";
 import Button from "../Button";
 import classNames from "classnames";
+import { useAmount } from "@/context/AmountContext";
 
 const Navbar = () => {
+
+   const { activeAmount, setActiveAmount } = useAmount();
+   
   const [open, setOpen] = useState(false);
   const [previewAmount, setPreviewAmount] = useState<number | null>(null);
-  const [activeAmount, setActiveAmount] = useState<number | null>(null);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -17,12 +20,11 @@ const Navbar = () => {
         !dropdownRef.current.contains(e.target as Node)
       ) {
         setOpen(false);
-        setPreviewAmount(null); // reset preview on outside click
+        setPreviewAmount(null);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () =>
-      document.removeEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const amountData = [1000, 5000, 7500];
@@ -37,16 +39,17 @@ const Navbar = () => {
           <p className="w-fit flex items-center gap-2 body !font-semibold ">
             <Icon icon="favicon" width={32} height={32} />
             <span className="bg-textGradient bg-clip-text text-transparent">
-              {activeAmount ? `+${activeAmount}` : "10,000"}
+              {activeAmount ? `${activeAmount}` : "10,000"}
             </span>
           </p>
           <Icon
             icon="arrow-up"
             width={24}
             height={24}
-            className={`transition-transform duration-300 ${
+            className={classNames(
+              "transition-transform duration-300",
               open ? "rotate-180" : ""
-            }`}
+            )}
           />
         </button>
 
@@ -58,7 +61,7 @@ const Navbar = () => {
             <div className="w-full px-6 pt-6">
               <AeroCard />
               <div className="flex items-center gap-2 text-center pt-10 pb-6 overflow-x-auto">
-                {amountData.map((amount) => (
+                {amountData?.map((amount) => (
                   <button
                     key={amount}
                     onClick={() => setPreviewAmount(amount)}
@@ -80,7 +83,7 @@ const Navbar = () => {
                 icon={<Icon icon="aerocard-icon" width={24} height={24} />}
                 onClick={() => {
                   if (previewAmount !== null) {
-                    setActiveAmount(previewAmount);
+                    setActiveAmount((prev) => (prev ?? 10000) + previewAmount);
                     setOpen(false);
                     setPreviewAmount(null);
                   }
