@@ -6,11 +6,15 @@
     "aerocard-icon",
     "arrow-up",
     "button-icon",
+    "cross-icon-toastify-success",
+    "cross-icon-toastify",
+    "error-page-icon",
     "favicon",
     "filter-dropdown-icon",
     "github-icon",
     "hero-card-icon-wrapper1",
     "hero-card-icon-wrapper2",
-    "hero-card-icon-wrapper3"
+    "hero-card-icon-wrapper3",
+    "success-page-icon"
   ]
 }

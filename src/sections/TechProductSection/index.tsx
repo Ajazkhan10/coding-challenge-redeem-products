@@ -8,6 +8,7 @@ import SortByButtons from "./SortByButtons";
 import Icon from "@/src/components/Icon/Icon";
 import classNames from "classnames";
 import { useAmount } from "@/context/AmountContext";
+import { ToastSuccess } from "@/src/utils/helpers";
 
 const categories = [
   "All Products",
@@ -21,14 +22,14 @@ const sortOptions = ["Most Recent", "Lowest Price", "Highest Price"];
 const ITEMS_PER_PAGE = 16;
 
 const TechProductSection: React.FC = () => {
-
-    const { activeAmount } = useAmount();
-
+  const { activeAmount, setActiveAmount } = useAmount();
 
   const [filter, setFilter] = useState("All Products");
   const [sortBy, setSortBy] = useState("Most Recent");
   const [page, setPage] = useState(1);
   const [processingIndex, setProcessingIndex] = useState<number | null>(null);
+
+  const [redeemedItems, setRedeemedItems] = useState<any[]>([]);
 
   const filteredProducts = useMemo(() => {
     return filter === "All Products"
@@ -49,6 +50,14 @@ const TechProductSection: React.FC = () => {
     page * ITEMS_PER_PAGE
   );
 
+  const handleRedeem = (product: any, index: number) => {
+    setProcessingIndex(index);
+    setActiveAmount((prev) => prev - product.points);
+    setRedeemedItems((prev) => [...prev, product]);
+    console.log("Redeemed items:", [...redeemedItems, product]);
+    ToastSuccess(`${product?.name} added to your rewards! 🎉`);
+    setTimeout(() => setProcessingIndex(null), 3000);
+  };
 
   return (
     <section className="w-full bg-white py-20 md:py-[160px] max-w-[1496px] mx-auto px-4 ">
@@ -118,10 +127,7 @@ const TechProductSection: React.FC = () => {
               disabled={
                 processingIndex === index || activeAmount < product?.points
               }
-              onClick={() => {
-                setProcessingIndex(index);
-                setTimeout(() => setProcessingIndex(null), 3000);
-              }}
+              onClick={() => handleRedeem(product, index)}
             >
               {processingIndex === index ? (
                 "Processing..."
