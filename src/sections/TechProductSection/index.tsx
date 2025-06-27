@@ -90,7 +90,7 @@ const TechProductSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {paginatedProducts?.map((product, index) => (
           <div key={index} className="w-full flex flex-col items-center">
             <div className="w-full border  border-[#DAE4F2] rounded-t-lg aspect-square overflow-hidden max-h-[320px] flex items-center justify-center">
