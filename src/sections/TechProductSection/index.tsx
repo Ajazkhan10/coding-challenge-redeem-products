@@ -18,6 +18,14 @@ const categories = [
   "Monitors & TV",
 ];
 
+interface Product {
+  name: string;
+  category: string;
+  points: number;
+  image: string;
+}
+
+
 const sortOptions = ["Most Recent", "Lowest Price", "Highest Price"];
 const ITEMS_PER_PAGE = 16;
 
@@ -29,7 +37,7 @@ const TechProductSection: React.FC = () => {
   const [page, setPage] = useState(1);
   const [processingIndex, setProcessingIndex] = useState<number | null>(null);
 
-  const [redeemedItems, setRedeemedItems] = useState<any[]>([]);
+const [redeemedItems, setRedeemedItems] = useState<Product[]>([]);
 
   const filteredProducts = useMemo(() => {
     return filter === "All Products"
@@ -50,7 +58,7 @@ const TechProductSection: React.FC = () => {
     page * ITEMS_PER_PAGE
   );
 
-  const handleRedeem = (product: any, index: number) => {
+  const handleRedeem = (product: Product, index: number) => {
     setProcessingIndex(index);
     setActiveAmount((prev) => prev - product.points);
     setRedeemedItems((prev) => [...prev, product]);
