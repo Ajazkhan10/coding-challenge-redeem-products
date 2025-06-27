@@ -18,6 +18,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
   return (
     <div className="w-fit border py-2 px-3 shadow-custom-sm flex items-center gap-3 bg-white border-[#DAE4F2] rounded-lg whitespace-nowrap">
       <button
+        aria-label="Previous page"
         disabled={isFirst}
         onClick={() => onPageChange(page - 1)}
         className={isFirst ? "cursor-not-allowed" : ""}
@@ -35,10 +36,14 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
       </button>
 
       <p className="body !text-sm leading-[150%]">
-        Page <span className="bg-textGradient bg-clip-text text-transparent text-sm">{page} of {totalPages}</span>
+        Page
+        <span className="bg-textGradient bg-clip-text text-transparent text-sm">
+          {page} of {totalPages}
+        </span>
       </p>
 
       <button
+        aria-label="Next page"
         disabled={isLast}
         onClick={() => onPageChange(page + 1)}
         className={isLast ? "cursor-not-allowed" : ""}

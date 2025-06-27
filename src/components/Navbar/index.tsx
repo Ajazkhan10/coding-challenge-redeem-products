@@ -33,6 +33,7 @@ const Navbar = () => {
     <nav className="w-full flex relative items-center justify-end h-[128px] max-w-[1446px] mx-auto px-4">
       <div ref={dropdownRef} className="relative">
         <button
+          aria-label="drop-down-icon"
           onClick={() => setOpen((prev) => !prev)}
           className="w-fit border border-[#DAE4F2] rounded-2xl hover:bg-purple-50 transition-colors ease-in-out duration-300 shadow-custom-xl py-2 px-4 group flex items-center gap-6 justify-between"
         >
@@ -63,6 +64,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2 text-center pt-10 pb-6 overflow-x-auto">
                 {amountData?.map((amount) => (
                   <button
+                    aria-label="add balance"
                     key={amount}
                     onClick={() => setPreviewAmount(amount)}
                     className={classNames(

@@ -30,12 +30,15 @@ p,
   font-size: 18px;
   line-height: 150%;
   letter-spacing: 24%;
-  color: #7C899C;
   margin: 0 !important;
   @media (max-width: 768px) {
     font-size: 16px;
     font-weight: 600;
   }
+}
+
+.body {
+  @apply text-gray-700; /* instead of text-gray-400/500 */
 }
 
 

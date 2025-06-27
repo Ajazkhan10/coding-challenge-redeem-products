@@ -51,7 +51,7 @@ const Button: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button className={combinedClasses} {...props}>
+    <button aria-label="primary-button" className={combinedClasses} {...props}>
       {content}
     </button>
   );
