@@ -27,7 +27,7 @@ interface Product {
 
 
 const sortOptions = ["Most Recent", "Lowest Price", "Highest Price"];
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = 16;
 
 const uniqueCategories = [
   "All Products",
