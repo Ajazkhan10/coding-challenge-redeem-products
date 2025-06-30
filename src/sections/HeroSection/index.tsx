@@ -72,7 +72,7 @@ const HeroSection = () => {
               Here you’ll be able to exchange all of your hard-earned Aeropoints
               and exchange them for cool tech.
             </p>
-            <Button label="VIEW ALL PRODUCTS" variant="primary" />
+            <Button slug="/#products" label="VIEW ALL PRODUCTS" variant="primary" />
           </div>
 
           <div className="w-full lg:w-1/2 hidden lg:block">

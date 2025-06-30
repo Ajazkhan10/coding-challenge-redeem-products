@@ -74,7 +74,7 @@ const [redeemedItems, setRedeemedItems] = useState<Product[]>([]);
   };
 
   return (
-    <section className="w-full bg-white py-20 md:py-[160px] max-w-[1496px] mx-auto px-4 ">
+    <section id="products" className="w-full bg-white py-20 md:py-[160px] max-w-[1496px] mx-auto px-4 ">
       <div className="w-full flex flex-col gap-10 mb-16">
         <Heading type="h2" className="!font-black">
           <span className="bg-textGradient mr-2 bg-clip-text text-transparent">
@@ -88,7 +88,7 @@ const [redeemedItems, setRedeemedItems] = useState<Product[]>([]);
             <div className="w-full md:w-fit flex items-center gap-3 whitespace-nowrap pr-8 border-r border-gray-200">
               <p className="w-fit body hidden md:block">Filter by:</p>
               <CustomDropdown
-                options={categories}
+                options={uniqueCategories}
                 value={filter}
                 onChange={(newFilter) => {
                   setFilter(newFilter);
