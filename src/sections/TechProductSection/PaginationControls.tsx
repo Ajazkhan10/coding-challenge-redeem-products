@@ -37,7 +37,7 @@ const PaginationControls: React.FC<PaginationControlsProps> = ({
 
       <p className="body !text-sm leading-[150%]">
         Page
-        <span className="bg-textGradient bg-clip-text text-transparent text-sm">
+        <span className="bg-textGradient ml-1 bg-clip-text text-transparent text-sm">
           {page} of {totalPages}
         </span>
       </p>

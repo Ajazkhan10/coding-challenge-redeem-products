@@ -8,6 +8,7 @@ interface AmountContextType {
 const AmountContext = createContext<AmountContextType | undefined>(undefined);
 
 export const AmountProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  
   const [activeAmount, setActiveAmount] = useState(10000);
 
   useEffect(() => {

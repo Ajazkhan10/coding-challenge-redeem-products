@@ -27,7 +27,13 @@ interface Product {
 
 
 const sortOptions = ["Most Recent", "Lowest Price", "Highest Price"];
-const ITEMS_PER_PAGE = 16;
+const ITEMS_PER_PAGE = 8;
+
+const uniqueCategories = [
+  "All Products",
+  ...Array.from(new Set(products.map(p => p.category))),
+];
+
 
 const TechProductSection: React.FC = () => {
   const { activeAmount, setActiveAmount } = useAmount();
